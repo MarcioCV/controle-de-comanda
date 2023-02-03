@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+
+Route::get('/{mult}/{num1}/{num2}', function ($mult,$num1,$num2) {
+
+    return view('base',[
+        'mult' => $mult,
+        'num1' => $num1,
+        'num2' => $num2
+    ]);
+
+});
